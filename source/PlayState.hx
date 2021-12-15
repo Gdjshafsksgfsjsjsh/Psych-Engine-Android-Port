@@ -901,7 +901,7 @@ class PlayState extends MusicBeatState
 		add(iconP2);
 		reloadHealthBarColors();
         
-        var creditTxt:FlxText = new FlxText(4,healthBarBG.y + 20,0,("Port by TOPPY"), 24);
+        var creditTxt:FlxText = new FlxText(4,healthBarBG.y + 20,0,("CODE BY TOPPY"), 24);
         creditTxt.scrollFactor.set();
         creditTxt.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         creditTxt.borderColor = FlxColor.BLACK;
@@ -2291,12 +2291,16 @@ class PlayState extends MusicBeatState
 						{
 							case 0:
 								animToPlay = 'singLEFT';
+								heath -= 0.05;
 							case 1:
 								animToPlay = 'singDOWN';
+								heath -= 0.05;
 							case 2:
 								animToPlay = 'singUP';
+								heath -= 0.05;
 							case 3:
 								animToPlay = 'singRIGHT';
+								heath -= 0.05;
 						}
 						if(daNote.noteType == 'GF Sing') {
 							gf.playAnim(animToPlay + altAnim, true);
